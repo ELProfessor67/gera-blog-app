@@ -2,24 +2,24 @@
 import React from 'react'
 import SocialMedia from '@/components/SocialMedia';
 import Footer from '@/components/Footer'
-import TypeWriterEffect from 'react-typewriter-effect';
+// import TypeWriterEffect from 'react-typewriter-effect';
 import Link from 'next/link';
 
-const paras = [
-  "Welcome to the heart of innovation and accomplishment at [Your Company Name]. Our diverse portfolio showcases our commitment to excellence, creativity, and cutting-edge solutions. Each project is a testament to our passion for pushing boundaries and delivering exceptional results."
-]
+// const paras = [
+//   "Welcome to the heart of innovation and accomplishment at [Your Company Name]. Our diverse portfolio showcases our commitment to excellence, creativity, and cutting-edge solutions. Each project is a testament to our passion for pushing boundaries and delivering exceptional results."
+// ]
 
-function deleyCalulater(i,speed){
-  if(i == 0){
-    return 0;
-  }
-  let text = '';
-  for (let index = 0; index < i; index++) {
-    text += paras[index]
-  }
-  return (text.length)*speed;
+// function deleyCalulater(i,speed){
+//   if(i == 0){
+//     return 0;
+//   }
+//   let text = '';
+//   for (let index = 0; index < i; index++) {
+//     text += paras[index]
+//   }
+//   return (text.length)*speed;
 
-}
+// }
 
 const page = () => {
   return (
@@ -32,7 +32,7 @@ const page = () => {
       </section>
       <section className="section" style={{ paddingTop: '2rem' }}>
         <div className="container">
-          {
+          {/* {
             paras.map((data,i) => (
               <p className='para font-dotted'>
                 <TypeWriterEffect
@@ -44,7 +44,11 @@ const page = () => {
                 />
               </p>
             ))
-          }
+          } */}
+
+        <p className='para font-dotted'>
+        Welcome to the heart of innovation and accomplishment at [Your Company Name]. Our diverse portfolio showcases our commitment to excellence, creativity, and cutting-edge solutions. Each project is a testament to our passion for pushing boundaries and delivering exceptional results.
+        </p>
 
           <ol className='mt-10 para flex flex-col gap-3 list-decimal' type='1'>
             <li className='flex items-center font-dotted gap-4'>
