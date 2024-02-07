@@ -1,27 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+
+html
+{
+  scroll-behavior: smooth;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+body
+{
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+.container
+{
+  max-width: 100rem;
+}
+
+.section
+{
+  width: 100vw;
+  @apply p-5;
+  padding-top: 4rem;
+}
+
+
+.para
+{
+  max-width: 43rem;
+  margin: auto;
+  margin-bottom: 1.5rem;
+  line-height: 2;
+  letter-spacing: .01rem;
+  @apply text-black/90
+}
+
+.image-container .cover
+{
+  left: -100%;
+  transition: all .2s;
+}
+.image-container:hover .cover
+{
+  left: 0;
+}
+
+
+.scrolling-text {
+  animation: marquee 15s linear infinite;
+  animation-delay: var(--i);
+  display: block;
+  
+}
+
+.scrolling-text-reverce {
+  animation: marquee-reverce 15s linear infinite;
+  animation-delay: var(--i);
+  display: block;
+  transform: translateX(90%);
+  
+}
+
+.bg-candle
+{
+  background: url('https://gallery.canary---yellow.com/cdn/shop/t/8/assets/candles_flame_small.gif?v=126890592163997911351655884592');
+  height: 3.4rem;
+  background-size: auto 100%;
+  margin-top: 8rem;
+}
+
+.animate
+{
+  animation: zanimate 5s linear infinite; 
+  transform-origin: center;
+  perspective: 100;
+}
+
+.icons-animate
+{
+  animation: icons-animate 5s linear infinite;
+  animation-delay: var(--i);
+}
+
+@keyframes icons-animate
+{
+  0% {
+    transform: translateY(1rem);
+  }
+  100% {
+    transform: translateY(0rem);
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+@keyframes zanimate
+{
+  0% {
+    transform: rotateX(0deg);
+  }
+  100% {
+    transform: rotateX(360deg);
+  }
+}
+
+
+ @keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes marquee-reverce {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
 }

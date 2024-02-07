@@ -1,0 +1,251 @@
+a/* custom CS code */
+
+
+/* expand text area */
+
+.expand_button,
+.collapse_button {
+	background: transparent url(https://innovationlabs.harvard.edu/wp-content/themes/innolabs/assets/img/expand_button_arrow-orange.png) right center no-repeat;
+	background-size: auto 20px;
+	color: #fff !important;
+	font-size: 11px;
+	font-weight: 600;
+	text-transform: uppercase;
+	text-decoration: none;
+	letter-spacing: 1px;
+	display: inline-block;
+	height: 20px;
+	line-height: 20px;
+	padding: 0 12px 0 5px;
+}
+
+.collapse_button {
+	background: transparent url(https://innovationlabs.harvard.edu/wp-content/themes/innolabs/assets/img/collapse_button_arrow-orange.png) left center no-repeat;
+	padding: 0 5px 0 12px;
+}
+
+.expand_button.hidden {
+	display: none;
+}
+
+.expand_section {
+	display: none;
+}
+
+.mejs-button>button {
+	min-width: 0;
+}
+
+
+
+.topspace0 {
+	padding-top: 0 !important;
+	margin-top: 0 !important;
+}
+
+section.nopadding {
+	padding: 0 !important;
+}
+
+Xsection.nopadding > .container {
+	padding-top: 0 !important;
+	padding-bottom: 0 !important;
+}
+
+
+
+/* booking hours */
+
+#ff-bookings {
+    margin-top: -30px;
+    padding-top: 0;
+}
+
+
+
+/* tabs */
+
+.tab_wrapper {
+	margin: 20px 0 -20px 0;
+	border-bottom: 1px solid #a91c30;
+}
+
+.tab_wrapper .tab {
+	margin: 0 1px 0 0;
+	display: block;
+	background: #ccc;
+	border: 1px solid #999;
+	border-bottom: none;
+	position: relative;
+}
+
+/* full screen styles */
+@media screen and (min-width: 600px) {
+
+	.tab_wrapper .tab {
+		display: inline-block;
+		-webkit-border-top-left-radius: 5px;
+		-webkit-border-top-right-radius: 5px;
+		-moz-border-radius-topleft: 5px;
+		-moz-border-radius-topright: 5px;
+		border-top-left-radius: 5px;
+		border-top-right-radius: 5px;	
+		border-bottom-width: 1px;
+	}
+	
+}
+
+
+.tab_wrapper .tab,
+.tab_wrapper .tab a {
+	color: #333;
+	text-transform: uppercase;
+	font-weight: 400;
+}
+
+.tab_wrapper .tab a:hover {
+	color: #a91c30;
+}
+
+.tab_wrapper .tab a {
+	cursor: pointer;
+	display: block;
+	padding: 5px 20px;
+	text-decoration: none !important;
+}
+
+.tab_wrapper .tab.active {
+	background: #a91c30;
+	border-color: #a91c30;
+}
+
+@media screen and (min-width: 600px) {
+	.tab_wrapper .tab.active {
+		bottom: -1px;
+		padding-top: 2px;
+	}
+}
+
+.tab_wrapper .tab.active a {
+	color: #fff;
+	cursor: text;
+	font-weight: normal;
+}
+
+#news-event-list .jewelbox .window-shade {
+	opacity:.5 !important;
+}
+
+#news-event-list .jewelbox:hover .window-shade {
+	opacity:.8 !important;
+}
+
+#news-event-list .jewelbox.venture-team-list .window-shade {
+	opacity:.85 !important;
+}
+
+@media (max-width: 919px) {
+
+	#new-home-slider-container #new-home-slider .slide {
+		height: 35vh;
+	}
+
+	#new-home-slider-container #new-home-slider .slide .item {
+	    background-position: left center !important;
+	}
+
+}
+
+
+
+.facetwp-facet-search .facetwp-search {
+	min-width: 0 !important;
+}
+
+.medium {
+    font-size: 20px;
+    line-height: 1.5em;
+}
+
+.large {
+    font-size: 25px;
+    line-height: 1.5em;
+}
+
+.caption {
+	font-family: 'Native-Regular';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    letter-spacing: 0.02em;
+}
+
+.question {
+    Xfont-family: 'Larsseit-Medium';
+    font-style: normal;
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: 0.02em;
+    Xmargin: 50px 0 10px 0;
+}
+
+.answer {
+    font-family: 'Native-Regular';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 27px;
+    letter-spacing: 1px;
+    margin: 0 0 30px 0;
+}
+
+
+/* 10th anniversary logo */
+
+header.main,
+header.main #main-logo img {
+    height: 65px;
+}
+
+header.main .container {
+	padding-left: 0;
+}
+
+header.main #main-logo {
+	margin: 0;
+}
+
+header.main #main-logo img {
+    width: auto;
+    max-width: none;
+}
+
+header.main #tagline {
+    top: 9px;
+	font-size: 20px;   
+	left: 75px;
+}
+
+/* desktop screen styles */
+@media screen and (min-width: 920px) {
+
+    #nav-container nav ul.primary>li>a {
+	    line-height: 65px;
+    }
+	
+	body section:first-of-type {
+		padding-top: 65px;
+	}
+
+}
+
+
+/* mobile screen styles */
+@media screen and (max-width: 919px) {
+
+	header.main #main-logo img {
+	    height: 65px;
+    }
+
+}

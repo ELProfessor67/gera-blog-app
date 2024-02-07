@@ -1,0 +1,86 @@
+/* custom JS code */
+
+
+jQuery(document).ready(function() {
+
+
+	/* expand text area */
+	jQuery('.expand_button').click(function() {
+
+			expand_section = jQuery(this).attr("data-expand");
+			
+			jQuery(this).addClass("hidden");
+			jQuery("#" + expand_section).slideDown();
+
+		return false;
+	});
+
+	/* collapse text area */
+	jQuery('.collapse_button').click(function() {
+
+			collapse_section = jQuery(this).attr("data-expand");
+			
+			jQuery("#" + expand_section).slideUp();
+			jQuery(".expand_button[data-expand='" + expand_section + "']").removeClass("hidden");
+
+		return false;
+	});
+
+
+	// content scroll check to lock sidebar modules
+	jQuery(window).scroll(function() {
+	    var top_of_element = jQuery("#general-page").offset().top - 100;
+	    var bottom_of_element = jQuery("#general-page").offset().top + jQuery("#general-page").outerHeight();
+	    var bottom_of_screen = jQuery(window).scrollTop() + jQuery(window).innerHeight();
+	    var top_of_screen = jQuery(window).scrollTop();
+	
+	    if ( top_of_screen >= top_of_element ){
+	        // the element is at the top of the screen
+			jQuery("body").addClass("content_top");
+	    } else {
+			jQuery("body").removeClass("content_top");
+	    }
+	});
+	
+	
+	
+	// accordion module
+	jQuery('.accordion_content .acc_section .acc_title').click(function() {
+		jQuery(this).parents('.acc_section').toggleClass('active');
+		jQuery(this).parents('.acc_section').find('.acc_content').slideToggle('fast');
+		return false;
+	});
+
+
+
+	// smooth anchor links
+	jQuery('a[href^="#"]').click(function() {
+	    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') 
+	        || location.hostname == this.hostname) {
+	
+	        var target = jQuery(this.hash);
+	        target = target.length ? target : jQuery('[name=' + this.hash.slice(1) +']');
+	           if (target.length) {
+	             jQuery('html,body').animate({
+	                 scrollTop: target.offset().top -130
+	            }, 1000);
+	            return false;
+	        }
+	    }
+	});
+
+	
+});
+
+
+jQuery(window).scroll(function() {    
+    var scroll = jQuery(window).scrollTop();
+     //>=, not <=
+    if (scroll >= 50) {
+        // add class to body if the page is scrolled
+        jQuery("body").addClass("scrolled");
+    } else {
+        jQuery("body").removeClass("scrolled");
+    }
+});
+
